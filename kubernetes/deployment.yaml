@@ -1,0 +1,39 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: super-api
+spec:
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 1
+  template:
+    spec:
+      containers:
+        - name: worker
+          image: local/worker:2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+        - name: api
+          image: local/api:2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /isAlive
+              port: 8080
+          readinessProbe:
+            httpGet:
+              path: /isAlive
+              port: 8080
+          securityContext:
+            privileged: true
+            readOnlyRootFilesystem: true
+          volumeMounts:
+            - name: testing
+              mountPath: "/var/run/docker.sock"
+      volumes:
+      - name: testing
+        hostPath:
+          path: "/var/run/docker.sock"
