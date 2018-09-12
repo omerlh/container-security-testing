@@ -1,3 +1,4 @@
+set -e
 FILE="${1:-}";
 [[ ! -f "${FILE}" ]] && {
     echo "kubesec: ${FILE}: No such file" >&2;
