@@ -19,21 +19,21 @@ To view the results, open the project in Visual Studio (or Visual Studio for mac
 Open `OpenPositionsController`, you should see warnings from the static analysis.
 Alternatively, you can just build the project using `dotnet build` and view the warnings.
 
-## Dynamic Analysis
+### Dynamic Analysis
 I'm using [OWASP Zaproxy](https://github.com/zaproxy/zaproxy), a security tool by OWASP. To run it:
 ```
  ./scripts/run_tests.sh
 ```
 When the test execution completed, you can find the report under `glue/report.html`.
 
-## Dependency Scanning
+### Dependency Scanning
 I'm using [Retire.Net](https://github.com/RetireNet/dotnet-retire), a dependency scanner for dotnet. After installing it, run (in `src` folder):
 ```
 dotnet retire
 ```
 
-## Docker Image Scanning
-I'm using [Anchore Engine](https://github.com/anchore/anchore-engine/), a service that scan docker images. To use it:
+### Docker Image Scanning
+I'm using [Anchore Engine](https://github.com/anchore/anchore-engine/), a service that scan docker images. To scan the sample app using Anchore:
 * Launch anchore by running `docker-compose up -d` in `anchore-engine` folder.
 * Scan an image by executing the following POST request:
 ```
@@ -56,7 +56,7 @@ Cache-Control: no-cache
 ```
 The analyze process might take a while, but when it complete the response will contain all the known vulnerabilities for this image.
 
-# Kubernetes Files Scanning
+### Kubernetes Files Scanning
 I'm using `https://kubesec.io/`. Run it using (in `kubernetes` folder):
 ```
 ./kubesec deployment.yaml
