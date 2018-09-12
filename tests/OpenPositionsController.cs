@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -6,10 +7,10 @@ using Xunit;
 
 namespace tests
 {
-    public class ValuesController
+    public class OpenPositionsController
     {
         [Fact]
-        public async Task Get_ReturnsAllValues()
+        public async Task Get_ReturnFullstackPosition()
         {
             var url = Environment.GetEnvironmentVariable("API_URL");
 
@@ -19,15 +20,13 @@ namespace tests
             }
 
             var client = new HttpClient();
-            var result = await client.GetAsync($"{url}api/values/");
+            var result = await client.GetAsync($"{url}api/openpositions/");
             result.EnsureSuccessStatusCode();
 
             var content = await result.Content.ReadAsStringAsync();
-            var array = JsonConvert.DeserializeObject<string[]>(content);
+            var openPositions = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
 
-            Assert.Equal(2, array.Length);
-            Assert.Equal("value1", array[0]);
-            Assert.Equal("value2", array[1]);
+            Assert.True(openPositions.ContainsKey("Fullstack Developer"));
         }
     }
 }

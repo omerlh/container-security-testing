@@ -6,13 +6,17 @@ namespace api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class OpenPositionsController : ControllerBase
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<Dictionary<string, string>> Get()
         {
-            return new string[] { "value1", "value2"};
+            return new Dictionary<string, string> { 
+                { "Fullstack Developer", "http://jobs.soluto.com/apply/7oYgJDTwEI/Fullstack-Developer" },
+                { "Product Manager", "http://jobs.soluto.com/apply/izeE6HhNuv/Senior-Product-Manager"},
+                { "Designer", "http://jobs.soluto.com/apply/iPsb5tLZBm/Product-Designer"}
+            };
         }
 
         // GET api/values/5
