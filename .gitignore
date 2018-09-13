@@ -2,3 +2,5 @@ bin/
 obj/
 .vs/
 anchore-engine/db
+glue/
+src/api.csproj.user
