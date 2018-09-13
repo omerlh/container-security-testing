@@ -13,6 +13,7 @@ dotnet run
 And open `http://localhost:5000/api/openpositions/` in your browser.
 
 ## Tools
+You can see the output of the tools under `artifacts` folder, or run them manually as explained below.
 ### Static Analysis
 I'm using [Security Code Scan](https://security-code-scan.github.io/), a static analyzer for dotnet. 
 To view the results, open the project in Visual Studio (or Visual Studio for mac) and build the project.
