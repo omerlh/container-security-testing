@@ -1,0 +1,207 @@
+info: dotnet_retire.RetireLogger[0]
+      Scan starting
+fail: dotnet_retire.RetireLogger[0]
+      Found use of 4 vulnerable libs in 34 dependency paths.
+
+      * Microsoft.AspNetCore.App/2.1.1
+
+      * Microsoft.AspNetCore.Identity/2.1.1
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Identity/2.1.1
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Identity.EntityFrameworkCore/2.1.1
+           ╚ Microsoft.AspNetCore.Identity/2.1.1
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Identity.UI/2.1.1
+           ╚ Microsoft.AspNetCore.Identity/2.1.1
+
+      * Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Https/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel.Https/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Https/2.1.1
+             ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Https/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+
+      * System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+           ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Http.Connections.Common/1.0.1
+           ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+            ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Http.Connections/1.0.1
+           ╚ Microsoft.AspNetCore.Http.Connections.Common/1.0.1
+            ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+             ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.SignalR/1.0.1
+           ╚ Microsoft.AspNetCore.Http.Connections/1.0.1
+            ╚ Microsoft.AspNetCore.Http.Connections.Common/1.0.1
+             ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+              ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+           ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+            ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+            ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+             ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+             ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+              ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+               ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+             ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+              ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Https/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+             ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+              ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+               ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel.Https/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+             ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+              ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Https/2.1.1
+             ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+              ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+               ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+                ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Https/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Core/2.1.1
+             ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+              ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+               ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+            ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+             ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets/2.1.1
+             ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+              ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+               ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.Kestrel/2.1.1
+           ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets/2.1.1
+            ╚ Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions/2.1.1
+             ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+              ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.SignalR.Common/1.0.1
+           ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+            ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.SignalR.Core/1.0.1
+           ╚ Microsoft.AspNetCore.SignalR.Common/1.0.1
+            ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+             ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.SignalR/1.0.1
+           ╚ Microsoft.AspNetCore.SignalR.Core/1.0.1
+            ╚ Microsoft.AspNetCore.SignalR.Common/1.0.1
+             ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+              ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.SignalR.Protocols.Json/1.0.1
+           ╚ Microsoft.AspNetCore.SignalR.Common/1.0.1
+            ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+             ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.SignalR.Core/1.0.1
+           ╚ Microsoft.AspNetCore.SignalR.Protocols.Json/1.0.1
+            ╚ Microsoft.AspNetCore.SignalR.Common/1.0.1
+             ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+              ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.SignalR/1.0.1
+           ╚ Microsoft.AspNetCore.SignalR.Core/1.0.1
+            ╚ Microsoft.AspNetCore.SignalR.Protocols.Json/1.0.1
+             ╚ Microsoft.AspNetCore.SignalR.Common/1.0.1
+              ╚ Microsoft.AspNetCore.Connections.Abstractions/2.1.1
+               ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore/2.1.1
+           ╚ Microsoft.AspNetCore.Server.IISIntegration/2.1.1
+            ╚ System.IO.Pipelines/4.5.0
+
+          Microsoft.AspNetCore.App/2.1.1
+          ╚ Microsoft.AspNetCore.Server.IISIntegration/2.1.1
+           ╚ System.IO.Pipelines/4.5.0
+
+info: dotnet_retire.RetireLogger[0]
+      Scan complete.
