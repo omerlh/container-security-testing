@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="SecurityCodeScan.VS2017" Version="2.8.0" />
   </ItemGroup>
 
 </Project>
