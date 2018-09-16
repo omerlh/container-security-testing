@@ -15,10 +15,9 @@ And open `http://localhost:5000/api/openpositions/` in your browser.
 ## Tools
 You can see the output of the tools under `artifacts` folder, or run them manually as explained below.
 ### Static Analysis
-I'm using [Security Code Scan](https://security-code-scan.github.io/), a static analyzer for dotnet. 
-To view the results, open the project in Visual Studio (or Visual Studio for mac) and build the project.
+I'm using [DevSkim](https://github.com/Microsoft/DevSkim), a static analyzer with IDE integration. 
+To view the results, install one of the extensions (for example, the one for VS Code).
 Open `OpenPositionsController`, you should see warnings from the static analysis.
-Alternatively, you can just build the project using `dotnet build` and view the warnings.
 
 ### Dynamic Analysis
 I'm using [OWASP Zaproxy](https://github.com/zaproxy/zaproxy), a security tool by OWASP. To run it:
