@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
@@ -10,20 +12,19 @@ namespace api.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<Dictionary<string, string>> Get()
-        {
-            return new Dictionary<string, string> { 
+        public ActionResult<Dictionary<string, string>> Get() =>
+            new Dictionary<string, string> { 
                 { "Fullstack Developer", "http://jobs.soluto.com/apply/7oYgJDTwEI/Fullstack-Developer" },
                 { "Product Manager", "http://jobs.soluto.com/apply/izeE6HhNuv/Senior-Product-Manager"},
                 { "Designer", "http://jobs.soluto.com/apply/iPsb5tLZBm/Product-Designer"}
             };
-        }
+        
 
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            return Convert.ToBase64String(MD5.Create().ComputeHash(Encoding.UTF8.GetBytes("value")));
         }
 
         // POST api/values
