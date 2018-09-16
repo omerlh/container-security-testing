@@ -2,4 +2,4 @@ version: '3'
 services:
   api:
     build:
-        context: ../../api/.
+        context: ../../src/.
