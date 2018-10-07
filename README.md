@@ -1,7 +1,7 @@
 # Container Security Testing
 This repo demo various security tools that can be used to scan containerized applications for security issues.
 All the tools in this repo are free and open source, and you can start using them today.
-To get a better understanding of the tools, what are they testing, and why read this blog post.
+To learn more about the tools mentioned here, checkout [this blog post](https://www.omerlh.info/2018/10/04/write-good-code-with-security-tests/?utm_source=github) - 
 
 ## Sample App
 All the tools are running on a sample app that I created.
