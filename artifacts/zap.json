@@ -1,0 +1,64 @@
+{
+  "@version": "2.7.0",
+  "@generated": "Tue, 2 Oct 2018 17:44:22",
+  "site": {
+    "@name": "http://api:9999",
+    "@host": "api",
+    "@port": "9999",
+    "@ssl": "false",
+    "alerts": [
+      {
+        "pluginid": "10094",
+        "alert": "Base64 Disclosure",
+        "name": "Base64 Disclosure",
+        "riskcode": "0",
+        "confidence": "2",
+        "riskdesc": "Informational (Medium)",
+        "desc": "<p>Base64 encoded data was disclosed by the application/web server<\/p>",
+        "instances": [
+          {
+            "uri": "http://api:9999/api/openpositions/",
+            "method": "GET",
+            "evidence": "com/apply/iPsb5tLZBm/Product-Designer"
+          },
+          {
+            "uri": "http://api:9999/api/openpositions/",
+            "method": "GET",
+            "evidence": "com/apply/izeE6HhNuv/Senior-Product-Manager"
+          },
+          {
+            "uri": "http://api:9999/api/openpositions/",
+            "method": "GET",
+            "evidence": "com/apply/7oYgJDTwEI/Fullstack-Developer"
+          }
+        ],
+        "count": "3",
+        "solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.<\/p>",
+        "otherinfo": "<p>r��j�e�����m-�f���v�-�7��\t�<\/p>",
+        "reference": "<p>https://www.owasp.org/index.php/Top_10_2013-A6-Sensitive_Data_Exposure<\/p><p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage<\/p>",
+        "cweid": "200",
+        "wascid": "13",
+        "sourceid": "3"
+      },
+      {
+        "pluginid": "50001",
+        "alert": "Resource Allows Anonymous Access",
+        "name": "Resource Allows Anonymous Access",
+        "riskcode": "1",
+        "confidence": "2",
+        "riskdesc": "Low (Medium)",
+        "desc": "<p>The web/application server allowed access without any Authorization header on the request.<\/p>",
+        "instances": [
+          {
+            "uri": "http://api:9999/api/openpositions/",
+            "method": "GET"
+          }
+        ],
+        "count": "1",
+        "solution": "<p>Ensure that the application appropriately requires authentication and authorization.<\/p>",
+        "reference": "<p><\/p>",
+        "sourceid": "3"
+      }
+    ]
+  }
+}

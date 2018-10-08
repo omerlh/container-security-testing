@@ -4,3 +4,4 @@ obj/
 anchore-engine/db
 glue/
 src/api.csproj.user
+glue/glue.json
